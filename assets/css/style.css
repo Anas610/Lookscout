@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-clr: #2B63D9;
+  --light-blue: #437EF7;
+  --footer-clr: #151B28;
+  --text-clr: #272D37;
+  --p-clr: #5F6D7E;
+  --light-clr: #A5ACBA;
+  --bg-clr: #F8F9FB;
+  --white: #fff;
+}
+
+.btn {
+  padding: .75rem 1.125rem;
+  font-weight: 600;
+  font-size: .9375rem;
+  width: 5rem;
+  height: 2.875rem;
+  border-radius: 6px;
+}
+
+.btn-prim {
+  background-color: var(--light-blue);
+  color: white;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.btn-sec {
+  color: var(--light-blue);
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .9375rem;
+  color: inherit;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.25rem;
+  line-height: 3.75rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.625rem;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.span {
+  font-weight: 600;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  display: inline-block;
+}
+
+.date {
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  color: var(--p-clr);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+body {
+  color: var(--text-clr);
+  font-family: "Inter", sans-serif;
+}
+
+
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: var(--bg-clr);
+  padding: 1.25rem 0;
+  border-bottom: .3125rem solid rgb(235, 234, 234);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__left {
+  display: flex;
+}
+
+.navbar__links {
+  display: flex;
+  margin-left: 4.375rem;
+  align-items: center;
+}
+
+.navbar__links li {
+  margin-right: 2rem;
+}
+
+.login {
+  margin-left: 1.875rem;
+}
+
+.navbar__menu {
+  display: none;
+}
+
+
+
+
+.banner {
+  padding: 5.875rem 0;
+  background-color: var(--bg-clr);
+  text-align: center;
+}
+
+.banner__container>span {
+  margin-bottom: 1rem;
+  padding-bottom: .3125rem;
+  color: var(--light-blue);
+}
+
+
+
+.digital {
+  background-color: var(--main-clr);
+  color: var(--white);
+  padding: 4rem;
+}
+
+.digital .container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.25rem;
+}
+
+.digital__welcome p {
+  margin-top: 1.5rem;
+  color: var(--light-clr);
+}
+
+.digital__subscribe {
+  margin: auto;
+}
+
+.enter {
+  display: flex;
+}
+
+.enter input[type="email"] {
+  padding: .75rem 1rem;
+  border: 0;
+  width: 19rem;
+  flex-grow: 1;
+  font-weight: 400;
+  font-size: .9375rem;
+  border-radius: .375rem 0rem 0rem .375rem;
+}
+
+input[type="submit"] {
+  color: var(--white);
+  background-color: var(--light-blue);
+  padding: .75rem 1rem;
+  border: 0;
+  border-radius: 0rem .375rem .375rem 0rem;
+}
+
+.subscribe {
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  margin-top: .8rem;
+  color: var(--light-clr);
+}
+
+
+
+.products {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.products .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2rem 2.5rem;
+}
+
+.first__product {
+  grid-row: 1 / span 3;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.first__product .product__content {
+  margin-top: 1.5rem;
+}
+
+.first__product p:first-of-type {
+  padding: 1rem 0;
+}
+
+.discribtion {
+  margin: .25rem 0 1rem;
+  color: var(--p-clr);
+}
+
+
+
+.blog {
+  padding: 4rem 0;
+}
+
+.blog__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.blog__posts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.post {
+  width: 30%;
+  margin-bottom: 3rem;
+}
+
+.post>h4 {
+  margin: .5rem 0 1rem;
+}
+
+.more {
+  display: flex;
+  align-content: center;
+}
+
+.more a {
+  color: var(--light-blue);
+}
+
+.arrow {
+  margin-left: .5rem;
+}
+
+
+
+.signinng {
+  padding: 4rem 0;
+  background-color: var(--main-clr);
+  color: var(--white);
+}
+
+.signinng .container {
+  text-align: center;
+}
+
+.signinng__welcome {
+  margin: .5rem 0 2rem;
+}
+
+.signUp>.btn {
+  background-color: var(--white);
+}
+
+
+
+footer {
+  background-color: var(--footer-clr);
+  padding: 4rem 0;
+  color: var(--white);
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+  border-bottom: .0625rem solid #2C3444;
+}
+
+.lookscout>p {
+  color: var(--light-clr);
+  margin: 1.375rem 1rem;
+  width: 20rem;
+}
+
+.lookscout>form {
+  width: 12.5rem;
+  display: flex;
+}
+
+.lookscout [type="email"] {
+  background-color: #2C3444;
+  border: 0;
+  flex-grow: 1;
+  padding: .75rem 1rem;
+  font-weight: 400;
+  font-size: .9375rem;
+  border-radius: .375rem 0rem 0rem .375rem;
+}
+
+.footer__list>h5 {
+  margin-bottom: 1.5rem;
+}
+
+.footer__list>li {
+  margin-bottom: .75rem;
+  color: var(--light-clr);
+}
+
+.footer__copyright {
+  text-align: center;
+  color: var(--light-clr);
+  padding-top: 2rem;
+}
+
+
+
+
+@media (max-width: 768px) {
+  :root {
+    font-size: .8125rem;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .navbar__links {
+    display: none;
+  }
+  .navbar__btns {
+    display: none;
+  }
+  .navbar__menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar__menu>span {
+    height: .1875rem;
+    width: 1.25rem;
+    background-color: var(--footer-clr);
+    margin-bottom: .1875rem;
+  }
+  .digital .container {
+    display: block;
+  }
+  .digital__welcome p {
+    width: 70%;
+  }
+  .enter {
+    width: 80%;
+    margin-top: 2rem;
+  }
+  .products .container {
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+  .product {
+    gap: 1rem;
+  }
+  .post {
+    width: 45%;
+  }
+  .footer__content{
+    flex-wrap: wrap;
+  }
+  .lookscout {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .lookscout__img {
+    width: 30%;
+  }
+  .lookscout>p {
+    width: 80%;
+  }
+  .lookscout>form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px){
+  :root {
+    font-size: .625rem;
+  }
+}

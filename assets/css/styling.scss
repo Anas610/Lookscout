@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+$main-clr: #2B63D9;
+$footer-clr: #151B28;
+$text-clr: #272D37;
+$light-clr: #878E9C;
+
+%flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+@mixin btn($bgcolor, $color) {
+    background-color: $bgcolor;
+    color: $color;
+    width: 2.75rem;
+    height: 1.375rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+body {
+    color: $text-clr;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    @extend .flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 112px;
+    align-items: center;
+}

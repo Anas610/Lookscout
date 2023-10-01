@@ -1,0 +1,72 @@
+// npm i -g sass
+// sass --watch file.scss:file.css
+
+// to collect all project styles 
+// create partials folder in css folder
+@import url(partials/_variables.scss); // must be first imported file as other files depend on it
+//        or 
+@import './partials/_navbar.scss';
+
+// underscore before the files in partials as they are subfiles not really files
+
+
+// out of root
+$main-clr: red; // need to compile to update it
+// Dynamic updating data 
+$direction: left;
+$basefont: 16px;
+
+
+
+body {
+    color: $main-clr;
+    margin-#{$direction}: 20px;
+    font-size: $basefont + 5;
+    nav{
+        width: 20px;
+        // & ref to parent 
+        &__logo{            // = nav__logo
+            width: 20px;
+            &:hover{}
+            &::after{}
+        }
+    }
+}
+// placeholder selector: fake box to hold styles and use it in scss but not as a class in html to avoid repeat it in html elements
+%btn{                  // %btn => fake class and not rendered in css --- .btn => real class and rendered in css 
+    color: red;
+}
+
+.button{
+    @extend %btn;  // not appear 
+    @extend .btn;  // appear
+}
+
+
+@mixin color($color, $size){    // @mixin used as a function that may has parameters
+    // soma repeated attribues and only one or more are special
+    padding: 20px;
+    width: 50px;
+    background-color: $color;
+}
+.class{
+    @include color(blue, 20px) // @include used to call a function
+}
+
+
+// media query in scss prefer to be into each element not in the last of the file as css
+@mixin media($screen){
+    @media(max-width: $screen){    // used into the function to call and use the parameter
+        width: 80%;
+        @content;   // used in @mixin for adding extra styles from @include if needed
+    }
+}
+
+.btn{
+    @include media(992px){
+        // more content
+        height: 100px;
+    }
+}
+
+// scss has functions and conditions that may help to not need js code 
